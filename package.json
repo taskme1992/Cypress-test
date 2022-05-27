@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.26.5",
+    "cypress-localstorage-commands": "^1.7.0",
     "cypress-xpath": "^1.6.2"
   },
   "dependencies": {
