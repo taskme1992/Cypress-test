@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --env allure=true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
+    "allure:open": "npx allure open allure-report",
+    "start": "npm install",
+    "pretest": "npm run allure:clear",
+    "test": "npm run cy:run || npm run posttest",
+    "posttest": "npm run allure:report",
+    "postposttest": "npm run allure:open",
+    "test-single-run": "npm test -- --single-run"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.26.5"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.17.2"
+  }
+}
