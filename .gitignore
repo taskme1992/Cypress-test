@@ -1,5 +1,7 @@
 package-lock.json
 node_modules
-cypress/video
+cypress/videos
 cypress/screenshots
 cypress.env.json
+allure-report
+allure-results

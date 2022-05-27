@@ -6,12 +6,9 @@
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
     "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
     "allure:open": "npx allure open allure-report",
-    "start": "npm install",
     "pretest": "npm run allure:clear",
-    "test": "npm run cy:run || npm run posttest",
-    "posttest": "npm run allure:report",
-    "postposttest": "npm run allure:open",
-    "test-single-run": "npm test -- --single-run"
+    "test": "npm run cy:run",
+    "posttest": "npm run allure:report && npm run allure:open"
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.26.5"

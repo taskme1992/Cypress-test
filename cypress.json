@@ -1,4 +1,5 @@
 {
   "experimentalStudio": true,
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "integrationFolder": "cypress/integration/1-getting-started"
 }
